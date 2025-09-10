@@ -1,12 +1,16 @@
-import { Button } from "./components/ui/button";
+import { Route, Routes } from "react-router-dom";
+import Homepage from "./components/view/HomePage/Homepage";
+import AdminDashboard from "./components/view/admin/AdminDasboard/AdminDasboard";
 
-function App() {
+const InteriorLandingPage = () => {
   return (
     <>
-      <h1>tess</h1>
-      <Button>Hello World</Button>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/admin" element={<AdminDashboard />} />
+      </Routes>
     </>
   );
-}
+};
 
-export default App;
+export default InteriorLandingPage;
