@@ -673,12 +673,21 @@ const Homepage = () => {
                 </h2>
               </div>
               <Button
-                size="lg"
-                className="group w-full shrink-0 rounded-full bg-[#E09A57] px-8 py-7 text-base font-bold text-gray-900 hover:bg-[#E09A57]/90 sm:w-auto"
-              >
-                Hubungi Kami
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </Button>
+  asChild
+  size="lg"
+  className="group w-full shrink-0 rounded-full bg-[#E09A57] px-8 py-7 text-base font-bold text-gray-900 hover:bg-[#E09A57]/90 sm:w-auto"
+>
+  <a
+    href="https://wa.me/62895403691133?text=Halo%2C%20saya%20tertarik%20dengan%20layanan%20desain%20interior%20%26%20custom%20furniture.%20Boleh%20saya%20konsultasi%20lebih%20lanjut%3F%20Terima%20kasih."
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex flex-row items-center justify-center gap-2"
+  >
+    <span>Hubungi Kami</span>
+    <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+  </a>
+</Button>
+
             </div>
             <div className="absolute bottom-0 right-6 top-0 hidden w-1/3 items-center justify-center opacity-20 lg:flex">
               <div className="flex -space-x-16">
