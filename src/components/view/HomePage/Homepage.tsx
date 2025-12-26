@@ -14,6 +14,8 @@ import {
   Apple, // <-- Ikon Baru
   Play, // <-- Ikon Baru
 } from "lucide-react";
+import hp from "@/assets/images/hp.png";
+import logo from "@/assets/images/logo.png";
 
 // Daftarkan plugin ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
@@ -284,7 +286,7 @@ const Homepage = () => {
               <div className="flex items-center justify-between">
                 <a href="#" className="flex items-center gap-2">
                   <img
-                    src="public/images/logo.png"
+                    src={logo}
                     alt="Interior Logo"
                     className="h-10 w-15 rounded-full"
                   />
@@ -647,7 +649,7 @@ const Homepage = () => {
               <img
                 id="app-promo-image"
                 className="w-[280px] rounded-[40px] shadow-2xl ring-8 ring-gray-900"
-                src="public/images/hp.png?q=80&w=987&auto=format&fit=crop"
+                src={`${hp}?q=80&w=987&auto=format&fit=crop`}
                 alt="App mockup on a phone"
               />
             </div>
@@ -708,7 +710,7 @@ const Homepage = () => {
             <div className="md:col-span-4">
               <a href="#" className="flex items-center gap-2">
                 <img
-                  src="public/images/logo.png"
+                  src={logo}
                   alt="Interior Logo"
                   className="h-10 w-15 rounded-full"
                 />
@@ -797,7 +799,7 @@ const Homepage = () => {
               })}
             </div>
             <p className="mt-8 text-xs leading-5 text-gray-500 md:order-1 md:mt-0">
-              &copy; 2025 Interior and exterior. All Rights Reserved.
+              &copy; 2025 PT Rumah Interior Eksterior Furniture. All Rights Reserved.
             </p>
           </div>
         </div>
