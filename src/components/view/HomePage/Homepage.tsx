@@ -10,7 +10,7 @@ import {
   ShieldCheck,
   Instagram,
   Mail,
-  Send,
+  Music2,
   Apple, // <-- Ikon Baru
   Play, // <-- Ikon Baru
 } from "lucide-react";
@@ -44,14 +44,14 @@ const finalPortfolioItems = [
     size: "52",
   },
   {
-    src: "https://images.unsplash.com/photo-1615529182902-1d8822dd3868?q=80&w=1287&auto=format&fit=crop",
+    src: "https://images.unsplash.com/photo-1631679706909-1844bbd07221?q=80&w=1287&auto=format&fit=crop",
     alt: "Ruang makan modern dengan lampu gantung",
     location: "Jakarta Selatan",
     client: "MRS. ADELINE",
     size: "74",
   },
   {
-    src: "https://images.unsplash.com/photo-1596179783935-3a72d382a20b?q=80&w=1170&auto=format&fit=crop",
+    src: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1170&auto=format&fit=crop",
     alt: "Kamar tidur dengan perapian modern",
     location: "Tangerang",
     client: "BINTORO CORP",
@@ -107,7 +107,7 @@ const catalogItems = [
   {
     title: "WARDROBE SET",
     imageSrc:
-      "https://images.unsplash.com/photo-1619983081563-431f7af0449d?q=80&w=1170&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1629078691371-2c83d139c986?q=80&w=1170&auto=format&fit=crop",
     colSpan: "md:col-span-2",
   },
   {
@@ -119,7 +119,7 @@ const catalogItems = [
   {
     title: "WALKING CLOSET",
     imageSrc:
-      "https://images.unsplash.com/photo-1588701235496-85769202a6b2?q=80&w=1287&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1560598613-2ffd99a32c28?q=80&w=1287&auto=format&fit=crop",
     colSpan: "md:col-span-2",
   },
   {
@@ -146,9 +146,12 @@ const footerLinks = {
     { href: "#features-section", label: "Keunggulan" },
   ],
   socials: [
-    { href: "#", icon: Instagram },
-    { href: "#", icon: Mail },
-    { href: "#", icon: Send },
+    {
+      href: "https://www.instagram.com/interioreksterior.id/",
+      icon: Instagram,
+    },
+    { href: "interioreksterior.id@gmail.com", icon: Mail },
+    { href: "https://www.tiktok.com/@interioreksterior.id", icon: Music2 },
   ],
 };
 
@@ -281,13 +284,10 @@ const Homepage = () => {
               <div className="flex items-center justify-between">
                 <a href="#" className="flex items-center gap-2">
                   <img
-                    src="https://placehold.co/40x40/black/white?text=IN"
+                    src="public/images/logo.png"
                     alt="Interior Logo"
-                    className="h-10 w-10 rounded-full"
+                    className="h-10 w-15 rounded-full"
                   />
-                  <span className="text-lg font-bold text-gray-800">
-                    INTERIOR
-                  </span>
                 </a>
                 <nav className="hidden lg:flex">
                   <ul className="flex items-center gap-8">
@@ -304,20 +304,24 @@ const Homepage = () => {
                   </ul>
                 </nav>
                 <Button className="hidden rounded-full bg-gray-900 px-6 text-white hover:bg-gray-700 lg:block">
-                  Contact
+                  <a href="https://wa.me/62895403691133?text=Halo%2C%20saya%20tertarik%20dengan%20layanan%20desain%20interior%20%26%20custom%20furniture.%20Boleh%20saya%20konsultasi%20lebih%20lanjut%3F%20Terima%20kasih."
+                  target="_blank"
+                  rel="noopener noreferrer">Contact</a>
                 </Button>
               </div>
             </div>
           </header>
-          <main className="flex flex-1 flex-col items-center justify-center text-center text-white">
+          <main className="relative flex min-h-screen flex-col items-center justify-center text-center text-white">
+            {/* HERO CONTENT */}
             <div className="px-4">
               <h1
                 id="hero-title"
                 className="text-4xl font-bold leading-tight md:text-6xl lg:text-7xl"
               >
-                Wujudkan Rumah &<br />
+                Wujudkan Rumah & <br />
                 Furniture Impianmu.
               </h1>
+
               <p
                 id="hero-subtitle"
                 className="mx-auto mt-6 max-w-2xl text-base text-gray-200 md:text-lg"
@@ -325,22 +329,43 @@ const Homepage = () => {
                 Spesialis desain interior & custom furniture dengan kualitas
                 premium, detail presisi, dan hasil elegan.
               </p>
-            </div>
-          </main>
-          <footer className="flex w-full items-center justify-center pb-10">
-            <a
-              id="scroll-btn"
-              href="#about-us-section"
-              className="group flex flex-col items-center gap-2 text-white"
-            >
-              <div className="flex h-20 w-20 items-center justify-center rounded-full border border-white/50 transition-all duration-300 group-hover:scale-110 group-hover:bg-white/10">
-                <MoveDown className="h-8 w-8 animate-bounce" />
+
+              {/* CTA BUTTON */}
+              <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+                <a
+                  href="https://wa.me/62895403691133?text=Halo%2C%20saya%20tertarik%20dengan%20layanan%20desain%20interior%20%26%20custom%20furniture.%20Boleh%20saya%20konsultasi%20lebih%20lanjut%3F%20Terima%20kasih."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center justify-center rounded-full bg-white px-10 py-4 text-base font-semibold text-gray-900 shadow-lg transition-all duration-300 hover:scale-105 hover:bg-gray-100"
+                >
+                  Hubungi Kami
+                </a>
+
+                <a
+                  href="#portfolio-section"
+                  className="inline-flex items-center justify-center rounded-full border border-white/70 px-10 py-4 text-base font-semibold text-white transition-all duration-300 hover:bg-white hover:text-gray-900"
+                >
+                  Lihat Portfolio
+                </a>
               </div>
-              <span className="text-xs font-semibold tracking-widest">
-                SCROLL / BEGIN
-              </span>
-            </a>
-          </footer>
+            </div>
+
+            {/* SCROLL BUTTON */}
+            <footer className="absolute bottom-6 flex w-full items-center justify-center">
+              <a
+                id="scroll-btn"
+                href="#about-us-section"
+                className="group flex flex-col items-center gap-2 text-white"
+              >
+                <div className="flex h-16 w-16 items-center justify-center rounded-full border border-white/50 transition-all duration-300 group-hover:scale-110 group-hover:bg-white/10">
+                  <MoveDown className="h-6 w-6 animate-bounce" />
+                </div>
+                <span className="text-xs font-semibold tracking-widest opacity-80">
+                  SCROLL
+                </span>
+              </a>
+            </footer>
+          </main>
         </div>
       </div>
 
@@ -622,7 +647,7 @@ const Homepage = () => {
               <img
                 id="app-promo-image"
                 className="w-[280px] rounded-[40px] shadow-2xl ring-8 ring-gray-900"
-                src="https://images.unsplash.com/photo-1544256718-3b62ff582593?q=80&w=987&auto=format&fit=crop"
+                src="public/images/hp.png?q=80&w=987&auto=format&fit=crop"
                 alt="App mockup on a phone"
               />
             </div>
@@ -674,13 +699,10 @@ const Homepage = () => {
             <div className="md:col-span-4">
               <a href="#" className="flex items-center gap-2">
                 <img
-                  src="https://placehold.co/40x40/black/white?text=IN"
+                  src="public/images/logo.png"
                   alt="Interior Logo"
-                  className="h-10 w-10 rounded-full"
+                  className="h-10 w-15 rounded-full"
                 />
-                <span className="text-lg font-bold text-gray-800">
-                  INTERIOR
-                </span>
               </a>
               <p className="mt-4 max-w-xs text-sm leading-6 text-gray-600">
                 PT Rumah Interior Eksterior Furniture - Spesialis desain
@@ -710,9 +732,8 @@ const Homepage = () => {
                 Information Contact
               </h3>
               <p className="mt-6 text-sm leading-6 text-gray-600">
-                Jl. Pangeran Antasari No.70, RW.8, Cilandak Barat, Kec.
-                Cilandak, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta
-                12430
+                Kp.awas paningal, RT.02/RW.09, Pagelaran, Kec. Ciomas, Kabupaten
+                Bogor, Jawa Barat 16610
               </p>
             </div>
           </div>
